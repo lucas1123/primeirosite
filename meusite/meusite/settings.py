@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cadastro',
+
+
 ]
 
 MIDDLEWARE = [
@@ -55,7 +57,9 @@ ROOT_URLCONF = 'meusite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': (
+            os.path.join(os.path.join(os.path.dirname(__file__)), 'templates'),
+        ),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
